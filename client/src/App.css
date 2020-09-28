@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+}
+
+.Form-margin-top {
+  margin-top: 100px;
+
+}
+
+/* Show it is fixed to the top */
+body {
+  min-height: 75rem;
+  padding-top: 5.5rem;
+  background: #f7f7f7;
+}
+
+/* react-table style */
+.actions-btn-group{
+  display: flex;
+  justify-content: space-evenly;
+}

@@ -1,0 +1,46 @@
+version: "3.2"
+services:
+  nodejs:
+    build: 
+      context: .
+    image: address-book
+    networks:
+      - client
+      - backend
+    environment:
+      - MYSQL_HOST=127.0.0.1
+      - MYSQL_USER=root
+      - MYSQL_PASS=pa$$w0rd
+      - MYSQL_DB=address_bookDB
+    volumes:
+      - ./www/:/var/www/html/
+    ports:
+      - "5001:5000"
+    container_name: address-book
+  mysql:
+    image: mysql
+    networks:
+      - backend
+    environment:
+      - MYSQL_ROOT_PASSWORD=pa$$w0rd
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=pa$$w0rd 
+      - MYSQL_DATABASE=address_bookDB
+    container_name: address-book
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:4.7
+    depends_on:
+      - mysql
+    networks:
+      - backend
+    ports:
+      - "30002:5000"
+    environment:
+      - PMA_HOST=127.0.0.1
+      - PMA_PORT= 3306
+    volumes:
+      - /sessions
+    container_name: address-book
+networks:
+  client:
+  backend:
