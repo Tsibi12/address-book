@@ -5,6 +5,7 @@ import './App.css';
 import CreateContact from './containers/CreateContact';
 import ListContact from './containers/ListContact';
 import NavBar from './components/NavBar';
+// import EditContact from './containers/EditContact';
 import EditContact from './containers/EditContact';
 
 
