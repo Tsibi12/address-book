@@ -4,7 +4,7 @@ const Contact = db.Contact;
 
 
 // Create contact
-exports.create = async (req, res,err) => {
+exports.create = (req, res,err) => {
   
   const {
     firstName,
