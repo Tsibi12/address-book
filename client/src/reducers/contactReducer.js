@@ -1,11 +1,5 @@
-import { ADD_CONTACT,EDIT_CONTACT, DELETE_CONTACT, FETCH_CONTACT, REPLACE_CONTACT } from '../actions/types';
+import { ADD_CONTACT,EDIT_CONTACT, DELETE_CONTACT, FETCH_CONTACT } from '../actions/types';
 
-// const defaultState = {
-//   contacts: [],
-//   // contact: {name:{}},
-//   // loading: false,
-//   errors:{}
-// }
 const initialState = { contacts: [] }
 
 export default function contactReducer(state = initialState, action) {
