@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Input from './Input';
 
 class NewContact extends Component {
     state = {
@@ -47,100 +48,74 @@ class NewContact extends Component {
             <div className="col-md-6 offset-md-3">
                 <h3>Creating New Contact</h3>
                 <form onSubmit={ this.handleSubmit }>
-                    <div className="form-group">
-                        <input
+                    <Input
                         type="text"
                         placeholder="FirstName"
-                        className="form-control"
                         name="firstName"
                         onChange={ this.handleInputChange }
                         value={ firstName }
-                        required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <input
+                    />
+                    
+                    <Input
                         type="text"
                         placeholder="LastName"
-                        className="form-control"
                         name="lastName"
                         onChange={ this.handleInputChange }
                         value={ lastName }
-                        required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <input
+                    />
+                    
+                    <Input
                         type="number"
                         placeholder="Phone"
-                        className="form-control"
                         name="phone"
                         onChange={ this.handleInputChange }
                         value={ phone }
-                        required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <input
+                    />
+                    
+                    <Input
                         type="email"
                         placeholder="Email"
-                        className="form-control"
                         name="email"
                         onChange={ this.handleInputChange }
                         value={ email }
-                        required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <input
+                    />
+                    
+                    <Input
                         type="text"
                         placeholder="City"
-                        className="form-control"
                         name="city"
                         onChange={ this.handleInputChange }
                         value={ city }
-                        required
-                        />
-                    </div>
+                    />
 
-                    <div className="form-group">
-                        <input
+                    <Input
                         type="text"
                         placeholder="Street"
-                        className="form-control"
                         name="street"
                         onChange={ this.handleInputChange }
                         value={ street }
-                        required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <input
+                    />
+                    
+                    <Input
                         type="number"
                         placeholder="Postal Code"
-                        className="form-control"
                         name="postalCode"
                         onChange={ this.handleInputChange }
                         value={ postalCode }
-                        required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <input
+                    />
+
+                    <Input
                         type="text"
                         placeholder="Country"
-                        className="form-control"
                         name="country"
                         onChange={ this.handleInputChange }
                         value={ country }
-                        required
-                        />
-                    </div>
+                    />
                     
                     <div className="form-group">
-                        <button type="submit" className="btn btn-success">Add Post</button> {' '}
+                        <button type="submit" className="btn btn-success">Add contact</button> {' '}
                         <button type="button" className="btn btn-warning float-right" onClick={ this.handleReset }>
-                        Reset
+                            Reset
                         </button>
                     </div>
                 </form>
